@@ -9,9 +9,9 @@ The goals of this document are to:
 
 Unless explicitly stated we don’t assume you have changed any settings in the [Ktor Project Generator](https://start.ktor.io/). Nor do we assume that you have added any optional plugins.
 
-## Unpacking and Running the Project on MacOS
+## Unpacking and Running the Project on macOS
 
-This is the process to unpack, build and run the project from the command line. The descriptions below assume that:
+This is the process to unpack, build and run the project from the command line on macOS. The descriptions below assume that:
 
 1. You have created and downloaded a project called *ktor-sample-app*.
 2. This has been placed in a folder called *myprojects* in your home directory.
@@ -56,6 +56,51 @@ This shows us that the application has started successfully and is running on th
 This is what you should see:
 
 ![Hello World in Ktor](./images/HelloWorldKtor.png)
+
+Congratulations! You have successfully started your Ktor project. 
+
+Note that the command line is unresponsive because the underlying process is busy running the Ktor application. You can type `CTRL-C` to cancel the application.
+
+## Unpacking and Running the Project on Windows
+
+This is the process to unpack, build and run the project from the command line on Windows. The descriptions below assume that:
+
+1. You have created and downloaded a project called *ktor-sample-app*.
+2. This has been placed in a folder called *myprojects* in your home directory.
+
+Please alter the names and paths as required to match your own setup.
+
+Create a folder called *ktor-sample-app* in the current directory and unpack the archive created by the Ktor Project Generator into that folder:
+
+```console
+myprojects> mkdir ktor-sample-app
+myprojects> tar -xf ktor-sample-app.zip -C ktor-sample-app
+```
+
+Change into the new directory and build and run the application:
+
+```console
+myprojects> cd ktor-sample-app
+ktor-sample-app> .\gradlew.bat build
+ktor-sample-app> .\gradlew.bat run
+```
+
+The output from the final command should look like this:
+
+```console
+ktor-sample-app> Task :run
+2023-07-05 16:00:51.735 [main] INFO ktor.application - Autoreload is disabled because the development mode is off.
+2023-07-05 16:00:51.966 [main] INFO ktor.application - Application started in 0.256 seconds.
+2023-07-05 16:00:52.094 [DefaultDispatcher-worker-1] INFO ktor.application - Responding at http://127.0.0.1:8080
+<==========---> 80% EXECUTING [31s]
+ktor-sample-app> :run
+```
+
+This shows us that the application has started successfully and is running on the current machine. You can verify the project is running by opening a browser at the URL mentioned in the output [http://127.0.0.1:8080](http://127.0.0.1:8080). 
+
+This is what you should see:
+
+![Hello World in Ktor on Windows](./images/HelloWorldKtorWindows.png)
 
 Congratulations! You have successfully started your Ktor project. 
 
