@@ -208,7 +208,7 @@ When creating a new project in the Ktor Project Generator there is an option to 
 
 ![Options In the Ktor Generator](./images/KtorGeneratorExternalConfigOptions.png)
 
-If you had chosen to store configuration externally then this would be the code in *Application.kt:*
+If you had chosen to store configuration externally, then this would be the code in *Application.kt*:
 
 ```kotlin
 fun main(args: Array<String>): Unit =
@@ -321,15 +321,15 @@ import io.ktor.server.http.content.*
 
 The meaning of this line is as follows:
 
-* Invoking *staticResources* tells Ktor that we want our application to be able to provide standard website content, such as HTML and JavaScript files. Although this content may be executed within the browser it is considered static from the server's point of view.
+* Invoking *staticResources* tells Ktor that we want our application to be able to provide standard website content, such as HTML and JavaScript files. Although this content may be executed within the browser, it is considered static from the server's point of view.
 * The URL  */content* specifies the path that should be used to fetch this content.
 * The path *mycontent* is the name of the folder within which the static content will live. Ktor will look for this folder within the *resources* directory. 
 
 
 In order to start serving this static content:
 
-1. Right click on the ‘src/main/resources’ folder within the project and create a directory called ‘mycontent’. Note you could also have used the new items shortcut. 
-2. Within this folder right-click (or use the shortcut) and create a web page called sample.html. Populate the page with some sample HTML tags.
+1. Right click on the *src/main/resources* folder within the project and create a directory called *mycontent*. Note you could also have used the new items shortcut. 
+2. Within this folder right-click (or use the shortcut) and create a web page called *sample.html*. Populate the page with some sample HTML tags.
 3. Restart the application.
 
 
@@ -342,7 +342,7 @@ When you open your browser at [http://0.0.0.0:9292/content/sample.html](http://0
 ![The Static Content In The Browser](./images/SampleStaticContentInBrowser.png)
 
 ### 5. Writing an integration test
-Ktor provides support for creating integration tests, and a skeleton test is created for you underneath *src/test/kotlin*. Assuming you have accepted the default settings the class will be called *ApplicationTest* and live in the package *com.example*. 
+Ktor provides support for creating integration tests, and the Project Generator creates a skeleton test file for you underneath *src/test/kotlin*. Assuming you have accepted the default settings the class will be called *ApplicationTest* and live in the package *com.example*. 
 
 Open the class and add the code below:
 
@@ -375,7 +375,7 @@ import org.junit.Test
 
 The `testApplication` method creates a new instance of Ktor. This instance is running inside a test environment, as opposed to a server like Netty. 
 
-We can then use the `application` method to invoke the same setup that is called from `embeddedServer`. Finally we can use the built-in `client` object and JUnit assertions to send a sample request and check the response.
+We can then use the `application` method to invoke the same setup functionality that is called from `embeddedServer`. Finally we can use the built-in `client` object and JUnit assertions to send a sample request and check the response.
 
 The test can be run in [any of the standard ways for executing tests](https://www.jetbrains.com/help/idea/performing-tests.html) in IntelliJ IDEA. Note that, because we are running a new instance of Ktor, the success or failure of the test does not depend on whether your application is running at 0.0.0.0. 
 
@@ -462,7 +462,7 @@ The following import will be needed:
 import io.ktor.server.plugins.statuspages.*
 ```
 
-These lines install the Status Pages Plugin and specify what actions to take when an exception of type `IllegalStateException` is thrown. Note we should be setting an HTTP error code in the response, but we will omit this so that the output is displayed directly in the browser.
+These lines install the Status Pages Plugin, and specify what actions to take when an exception of type `IllegalStateException` is thrown. Note we should be setting an HTTP error code in the response, but we will omit this so that the output is displayed directly in the browser.
 
 #### 3. Write sample code to trigger our handler.
 
