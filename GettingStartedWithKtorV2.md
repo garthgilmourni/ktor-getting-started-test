@@ -17,6 +17,8 @@ Below are detailed directions for building and running the project. Please choos
 
 <summary>Unpacking and Running the Project on macOS</summary>
 
+### Unpacking and Running the Project on macOS
+
 This is the process to unpack, build and run the project from the command line on macOS. The descriptions below assume that:
 
 1. You have created and downloaded a project called *ktor-sample-app*.
@@ -72,6 +74,8 @@ Note that the command line is unresponsive because the underlying process is bus
 <details>
 
 <summary> Unpacking and Running the Project on Windows </summary>
+
+### Unpacking and Running the Project on Windows
 
 This is the process to unpack, build and run the project from the command line on Windows. The descriptions below assume that:
 
